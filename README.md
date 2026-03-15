@@ -33,6 +33,17 @@ A quick preview of the NovaTech dashboard in action.
 * Chart.js
 * FakeStore API
 
+## Project Structure
+
+```
+css/        → stylesheets
+js/         → JavaScript logic
+images/     → screenshots and assets
+index.html  → main application entry
+README.md   → project documentation
+demo.gif    → application preview animation
+```
+
 ## Project Description
 
 NovaTech is a Single Page Application (SPA) developed as a back-office dashboard for managing a technology store inventory.
