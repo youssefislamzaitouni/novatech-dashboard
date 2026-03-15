@@ -5,7 +5,13 @@ It allows users to manage products, track stock, organize categories, and visual
 
 ## Live Demo
 
-https://youssefislamzaitouni.github.io/novatech-dashboard/
+[Open Live Demo](https://youssefislamzaitouni.github.io/novatech-dashboard/)
+
+## Demo
+
+A quick preview of the NovaTech dashboard in action.
+
+![NovaTech Demo](demo.gif)
 
 ## Features
 
@@ -34,17 +40,13 @@ The application allows administrators to manage products and categories while vi
 
 Data persistence is handled using LocalStorage, and external products can be imported from the FakeStore API.
 
-## Screenshot
+## Screenshots
 
 ### Dashboard
 ![Dashboard](images/dashboard-view.png)
 
 ### Products
 ![Products](images/products-view.png)
-
-## Demo
-
-![NovaTech Demo](demo.gif)
 
 ## Authors
 
