@@ -5,7 +5,8 @@ It allows users to manage products, track stock, organize categories, and visual
 
 ## Live Demo
 
-[Open Live Demo](https://youssefislamzaitouni.github.io/novatech-dashboard/)
+🚀 **Try the application here:** 
+[Open NovaTech Dashboard](https://youssefislamzaitouni.github.io/novatech-dashboard/)
 
 ## Demo
 
@@ -50,11 +51,11 @@ Data persistence is handled using LocalStorage, and external products can be imp
 
 ## Authors
 
-* Youssef Islam Zaitouni
-* Mohamed Belaidi
-* Adam Sahim
+- Youssef Islam Zaitouni  
+- Mohamed Belaidi  
+- Adam Sahim  
 
-Project developed as part of a university web development project.
+Developed as part of a university web development project.
 
 ## License
 
