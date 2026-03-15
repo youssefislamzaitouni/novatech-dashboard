@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NovaTech</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Novatech.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <div class="modal-body">
+      <img id="modalImage" class="modal-img">
+
+      <div class="modal-info">
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+
+        <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
+        <p><strong>Stock:</strong> <span id="modalStock"></span></p>
+        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<body>
+
+  <aside class="leftbar">
+    <div class="logo">NovaTech</div>
+
+    <ul class="nav-list">
+      <li class="nav-item active-nav" onclick="showSection('dashboard', this)">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Dashboard</span>
+      </li>
+
+      <li class="nav-item" onclick="showSection('products', this)">
+        <i class="fa-solid fa-box"></i>
+        <span>Products</span>
+      </li>
+
+      <li class="nav-item" onclick="showSection('categories', this)">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Categories</span>
+      </li>
+
+      
+      <li class="nav-item" onclick="showSection('apiStore', this)">
+        <i class="fa-solid fa-cloud-arrow-down"></i>
+        <span>API Store</span>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header class="mainbar">
+      <h3 id="pageTitle">Dashboard</h3>
+    </header>
+
+    <section id="dashboard" class="section active">
+      <div class="dashboard">
+        <div class="card">
+          <h4>Total Products</h4>
+          <p id="totalProducts">0</p>
+        </div>
+
+        <div class="card">
+          <h4>Total Stock</h4>
+          <p id="totalStock">0</p>
+        </div>
+
+        <div class="card">
+          <h4>Categories</h4>
+          <p id="totalCategories">0</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Stock by Category</h4>
+        <canvas id="stockChart"></canvas>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <h2 class="section-title">Products</h2>
+
+      <form id="productForm" class="form-row">
+        <input type="text" id="name" placeholder="Product name" required>
+        <input type="number" id="price" placeholder="Price" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+
+        <select id="categorySelect" required>
+          <option value="">Select category</option>
+        </select>
+
+        <button type="submit" class="btn-primary">
+          <i class="fa-solid fa-floppy-disk"></i> Save
+        </button>
+      </form>
+
+      <div class="toolbar">
+        <input type="text" id="searchInput" placeholder="Search product...">
+
+        <button onclick="sortByName(this)" class="btn-secondary">
+          <i class="fa-solid fa-arrow-down-a-z"></i>
+        </button>
+
+        <button onclick="sortByPrice(this)" class="btn-secondary">
+          <i class="fa-solid fa-arrow-down-short-wide"></i>
+        </button>
+
+        <button onclick="sortByStock(this)" class="btn-secondary">
+         Stock
+        </button>
+        <select id="filterCategory" onchange="filterByCategory()" class="btn-secondary">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+
+      <ul id="productList" class="list"></ul>
+    </section>
+
+    <section id="categories" class="section">
+      <h2 class="section-title">Categories</h2>
+
+      <form id="categoryForm" class="form-row">
+        <input type="text" id="categoryName" placeholder="Category name" required>
+        <button type="submit" class="btn-primary">
+          <i class="fa-solid fa-plus"></i> Add Category
+        </button>
+      </form>
+
+      <ul id="categoryList" class="list"></ul>
+    </section>
+
+    
+    <section id="apiStore" class="section">
+      <h2 class="section-title">API Store</h2>
+      <p>Browse products from FakeStore API and import them into your store.</p>
+      <ul id="apiProductList" class="list"></ul>
+    </section>
+
+  </main>
+
+  <script src="Novatech.js"></script>
+</body>
+</html>
+
