@@ -44,7 +44,7 @@ Data persistence is handled using LocalStorage, and external products can be imp
 
 ## Demo
 
-https://raw.githubusercontent.com/youssefislamzaitouni/novatech-dashboard/main/demo.mp4
+![NovaTech Demo](demo.gif)
 
 ## Authors
 
