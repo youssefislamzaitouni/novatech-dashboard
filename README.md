@@ -37,10 +37,10 @@ Data persistence is handled using LocalStorage, and external products can be imp
 ## Screenshot
 
 ### Dashboard
-![Dashboard](images/dashboard.png)
+![Dashboard](images/dashboard-view.png)
 
 ### Products
-![Products](images/products.png)
+![Products](images/products-view.png)
 
 ## Authors
 
